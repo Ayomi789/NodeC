@@ -17,6 +17,8 @@ const fs = require("fs");
 
 //fs.writeFileSync("test.js", "console.log('hello world')")
 
+
+//Write a file
 let mydata = `<h1>Hello world</h1>
                     <h2>I AM HERE </h2>`
 fs.writeFile ("test.html", mydata, (errr,data)=> {
@@ -26,13 +28,13 @@ fs.writeFile ("test.html", mydata, (errr,data)=> {
   console.log(data);
 })
 
-
+//Update file
 fs.appendFile("test.html", "<pre>Learning Node</pre>", (err)=>{
     console.log(err);
 })
 
 
-
+//Read file
 fs.readFile("./test.html", "utf-8", (err,data)=>{
     if(err) throw err
     console.log(data);

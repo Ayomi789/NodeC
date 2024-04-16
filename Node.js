@@ -19,24 +19,28 @@ const fs = require("fs");
 
 
 //Write a file
-let mydata = `<h1>Hello world</h1>
-                    <h2>I AM HERE </h2>`
-fs.writeFile ("test.html", mydata, (errr,data)=> {
-  if (errr) {
-      console.log("Error while writing");
-  }
-  console.log(data);
-})
+//let mydata = `<h1>Hello world</h1>
+             //       <h2>I AM HERE </h2>`
+//fs.writeFile ("test.html", mydata, (errr,data)=> {
+ // if (errr) {
+ //     console.log("Error while writing");
+//  }
+//  console.log(data);
+//})
 
 //Update file
-fs.appendFile("test.html", "<pre>Learning Node</pre>", (err)=>{
-    console.log(err);
-})
+//fs.appendFile("test.html", "<pre>Learning Node</pre>", (err)=>{
+  //  console.log(err);
+//})
 
 
 //Read file
-fs.readFile("./test.html", "utf-8", (err,data)=>{
-    if(err) throw err
-    console.log(data);
-})
+//fs.readFile("./test.html", "utf-8", (err,data)=>{
+ //   if(err) throw err
+  //  console.log(data);
+//})
 
+
+fs.writeFileSync("server.js",
+"console.log('Welcome')"
+)
